@@ -1,3 +1,5 @@
+from time import sleep
+
 import pytest
 from pages.pim_page import PIMPage
 from utilities.read_properties import ReadConfig
@@ -15,8 +17,13 @@ test_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", 
 data = pd.read_excel(test_data_path)
 
 class TestPim:
-    @pytest.mark.parametrize("emp_id, expected", [(row["emp_id"], row["expected"]) for _, row in data.iterrows()])
-    def test_pim(self, driver, emp_id, expected):
-        #driver.get(base_url)           # From config.ini ✅
-        pim_page = PIMPage(driver)
-        pim_page.pim_search_emp(emp_id)  # From Excel ✅
+    @pytest.mark.parametrize("emp_id", [(row["emp_id"]) for _, row in data.iterrows()])
+    def test_pim(self, driver, emp_id):
+        #driver.get(base_url)
+        pim_page = PIMPage()
+        pim_page.click_pim()
+        pim_page.is_page_loaded()
+        sleep(5)
+        pim_page.pim_search_emp(emp_id)
+        sleep(5)
+        pim_page.reset_search()
