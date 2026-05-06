@@ -6,6 +6,7 @@ class LoginPage(BasePage):
     USERNAME = (By.NAME, "username")
     PASSWORD = (By.NAME, "password")
     LOGIN_BUTTON = (By.XPATH, "//button[@type='submit']")
+    ADMIN_OPTION = (By.XPATH,"//a[normalize-space()='']")
 
     def is_page_loaded(self):
         return self.driver.find_element(*self.USERNAME).is_displayed()

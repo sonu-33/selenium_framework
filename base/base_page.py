@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage(ABC):
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 30)
 
     # Common method available to ALL pages
     def click(self, locator):
