@@ -1,5 +1,6 @@
 import pytest
 import os
+import pytest_html
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -16,21 +17,29 @@ def driver(): # defines driver fixture
     yield driver  # yields the browser object to tests
     driver.quit() # closes the browser after all tests finish
 
-# Hook to capture screenshot on test failure
+# Hook to capture screenshot on EVERY test (passed and failed)
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
 
-    if report.when == "call" and report.failed:
+    if report.when == "call":  # ✅ Removed "and report.failed" to capture all outcomes
         driver = item.funcargs.get("driver")
         if driver:
             screenshots_dir = "reports/screenshots"
             os.makedirs(screenshots_dir, exist_ok=True)
-            screenshot_path = os.path.join(screenshots_dir, f"{item.name}.png")
-            driver.save_screenshot(screenshot_path)
 
-            # Embed screenshot into HTML report
-            if hasattr(report, "extra"):
-                import pytest_html
-                report.extra = [pytest_html.extras.image(screenshot_path)]
+            # ✅ Include pass/fail status in filename for easy identification
+            status = "PASSED" if report.passed else "FAILED"
+            screenshot_filename = f"{item.name}_{status}.png"
+            screenshot_path = os.path.join(screenshots_dir, screenshot_filename)
+
+            try:
+                driver.save_screenshot(screenshot_path)
+
+                if not hasattr(report, "extras"):
+                    report.extras = []
+                report.extras.append(pytest_html.extras.image(screenshot_path))
+
+            except Exception as e:
+                print(f"Screenshot failed for {item.name}: {e}")
