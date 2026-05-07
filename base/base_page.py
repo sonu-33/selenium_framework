@@ -14,6 +14,12 @@ class BasePage(ABC):
     def enter_text(self, locator, text):
         self.wait.until(EC.presence_of_element_located(locator)).send_keys(text)
 
+    def is_element_present(self, locator):
+        try:
+            self.wait.until(EC.presence_of_element_located(locator))
+        except EC.NoSuchElementException:
+            return False
+
     @abstractmethod # Every subclass must implement this method
     def is_page_loaded(self):
         pass

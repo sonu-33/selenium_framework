@@ -17,13 +17,20 @@ test_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", 
 data = pd.read_excel(test_data_path)
 
 class TestPim:
-    @pytest.mark.parametrize("emp_id", [(row["emp_id"]) for _, row in data.iterrows()])
-    def test_pim(self, driver, emp_id):
-        #driver.get(base_url)
-        pim_page = PIMPage()
-        pim_page.click_pim()
-        pim_page.is_page_loaded()
-        sleep(5)
-        pim_page.pim_search_emp(emp_id)
-        sleep(5)
-        pim_page.reset_search()
+    def test_pim(self, driver):
+        driver.get(base_url)
+        pim_page = PIMPage(driver)
+        pim_page.click_pim() # This is Passed ✅
+
+    @pytest.mark.parametrize("emp_id", [str(int(row["emp_id"])) for _, row in data.iterrows()])
+    def test_pim_search(self, driver, emp_id):
+        pim_search = PIMPage(driver)
+        pim_search.is_page_loaded() # This is Passed ✅
+        pim_search.pim_search_emp(emp_id) # This is Passed ✅
+
+
+    def test_pim_reset(self, driver):
+        pim_reset = PIMPage(driver)
+        pim_reset.is_reset_present() # This is Passed ✅
+        pim_reset.reset_search() # This is Passed ✅
+
