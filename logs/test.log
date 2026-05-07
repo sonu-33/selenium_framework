@@ -9,3 +9,63 @@
 2026-05-07 15:30:45,204 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[@type='submit']")
 2026-05-07 15:30:45,204 - INFO - ZSeleniumFramework - Login action completed
 2026-05-07 15:30:45,205 - INFO - ZSeleniumFramework - Login form submitted
+2026-05-07 21:42:15,756 - INFO - ZSeleniumFramework - Starting login test for username=Admin expected=True
+2026-05-07 21:42:29,159 - INFO - ZSeleniumFramework - Opened URL: https://opensource-demo.orangehrmlive.com
+2026-05-07 21:42:29,160 - INFO - ZSeleniumFramework - Starting login with username: Admin
+2026-05-07 21:42:31,849 - INFO - ZSeleniumFramework - Entered text 'Admin' into element with locator: ('name', 'username')
+2026-05-07 21:42:32,026 - INFO - ZSeleniumFramework - Entered text 'admin123' into element with locator: ('name', 'password')
+2026-05-07 21:42:32,344 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[@type='submit']")
+2026-05-07 21:42:32,345 - INFO - ZSeleniumFramework - Login action completed
+2026-05-07 21:42:32,345 - INFO - ZSeleniumFramework - Login form submitted
+2026-05-07 21:42:32,351 - INFO - ZSeleniumFramework - Starting PIM page navigation test
+2026-05-07 21:42:44,427 - INFO - ZSeleniumFramework - Opened URL: https://opensource-demo.orangehrmlive.com
+2026-05-07 21:42:44,428 - INFO - ZSeleniumFramework - Attempting to click PIM menu option
+2026-05-07 21:42:48,725 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//span[normalize-space()='PIM']")
+2026-05-07 21:42:48,725 - INFO - ZSeleniumFramework - Clicked PIM menu
+2026-05-07 21:42:48,727 - INFO - ZSeleniumFramework - Starting employee search test for emp_id=777
+2026-05-07 21:42:48,727 - INFO - ZSeleniumFramework - Checking if PIM page is loaded
+2026-05-07 21:42:49,248 - INFO - ZSeleniumFramework - Element found with locator: ('xpath', "//h6[normalize-space()='PIM']")
+2026-05-07 21:42:49,249 - INFO - ZSeleniumFramework - PIM page verified as loaded
+2026-05-07 21:42:49,249 - INFO - ZSeleniumFramework - Starting employee search for emp_id: 777
+2026-05-07 21:42:49,306 - INFO - ZSeleniumFramework - Entered text '777' into element with locator: ('xpath', "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")
+2026-05-07 21:42:49,370 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[@type='submit']")
+2026-05-07 21:42:49,370 - INFO - ZSeleniumFramework - Employee search submitted
+2026-05-07 21:42:49,370 - INFO - ZSeleniumFramework - Employee search submitted
+2026-05-07 21:42:49,372 - INFO - ZSeleniumFramework - Starting PIM reset test
+2026-05-07 21:42:49,373 - INFO - ZSeleniumFramework - Checking if reset button is present
+2026-05-07 21:42:49,385 - INFO - ZSeleniumFramework - Element found with locator: ('xpath', "//button[normalize-space()='Reset']")
+2026-05-07 21:42:49,385 - INFO - ZSeleniumFramework - Reset button verified
+2026-05-07 21:42:49,386 - INFO - ZSeleniumFramework - Attempting to reset search
+2026-05-07 21:42:49,451 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[normalize-space()='Reset']")
+2026-05-07 21:42:49,451 - INFO - ZSeleniumFramework - Reset search completed
+2026-05-07 21:42:49,451 - INFO - ZSeleniumFramework - Reset action completed
+2026-05-07 22:31:26,983 - INFO - ZSeleniumFramework - Starting login test for username=Admin expected=True
+2026-05-07 22:31:31,248 - INFO - ZSeleniumFramework - Opened URL: https://opensource-demo.orangehrmlive.com
+2026-05-07 22:31:31,249 - INFO - ZSeleniumFramework - Starting login with username: Admin
+2026-05-07 22:31:32,466 - INFO - ZSeleniumFramework - Entered text 'Admin' into element with locator: ('name', 'username')
+2026-05-07 22:31:32,615 - INFO - ZSeleniumFramework - Entered text 'admin123' into element with locator: ('name', 'password')
+2026-05-07 22:31:32,970 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[@type='submit']")
+2026-05-07 22:31:32,971 - INFO - ZSeleniumFramework - Login action completed
+2026-05-07 22:31:32,971 - INFO - ZSeleniumFramework - Login form submitted
+2026-05-07 22:31:32,976 - INFO - ZSeleniumFramework - Starting PIM page navigation test
+2026-05-07 22:31:36,549 - INFO - ZSeleniumFramework - Opened URL: https://opensource-demo.orangehrmlive.com
+2026-05-07 22:31:36,550 - INFO - ZSeleniumFramework - Attempting to click PIM menu option
+2026-05-07 22:31:39,658 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//span[normalize-space()='PIM']")
+2026-05-07 22:31:39,658 - INFO - ZSeleniumFramework - Clicked PIM menu
+2026-05-07 22:31:39,662 - INFO - ZSeleniumFramework - Starting employee search test for emp_id=777
+2026-05-07 22:31:39,664 - INFO - ZSeleniumFramework - Checking if PIM page is loaded
+2026-05-07 22:31:40,199 - INFO - ZSeleniumFramework - Element found with locator: ('xpath', "//h6[normalize-space()='PIM']")
+2026-05-07 22:31:40,200 - INFO - ZSeleniumFramework - PIM page verified as loaded
+2026-05-07 22:31:40,200 - INFO - ZSeleniumFramework - Starting employee search for emp_id: 777
+2026-05-07 22:31:40,342 - INFO - ZSeleniumFramework - Entered text '777' into element with locator: ('xpath', "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']")
+2026-05-07 22:31:40,473 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[@type='submit']")
+2026-05-07 22:31:40,473 - INFO - ZSeleniumFramework - Employee search submitted
+2026-05-07 22:31:40,474 - INFO - ZSeleniumFramework - Employee search submitted
+2026-05-07 22:31:40,476 - INFO - ZSeleniumFramework - Starting PIM reset test
+2026-05-07 22:31:40,477 - INFO - ZSeleniumFramework - Checking if reset button is present
+2026-05-07 22:31:40,628 - INFO - ZSeleniumFramework - Element found with locator: ('xpath', "//button[normalize-space()='Reset']")
+2026-05-07 22:31:40,629 - INFO - ZSeleniumFramework - Reset button verified
+2026-05-07 22:31:40,629 - INFO - ZSeleniumFramework - Attempting to reset search
+2026-05-07 22:31:40,762 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[normalize-space()='Reset']")
+2026-05-07 22:31:40,762 - INFO - ZSeleniumFramework - Reset search completed
+2026-05-07 22:31:40,763 - INFO - ZSeleniumFramework - Reset action completed

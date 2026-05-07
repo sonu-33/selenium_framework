@@ -1,7 +1,6 @@
 import logging
 import os
 
-
 def get_logger(logger_name: str = "ZSeleniumFramework"):
     logs_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "logs")
     os.makedirs(logs_dir, exist_ok=True) # computes a logs directory path; creates it if it does not exist
