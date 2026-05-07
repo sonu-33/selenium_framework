@@ -14,18 +14,24 @@ class PIMPage(BasePage):
 
     #Actions
     def click_pim(self):
+        self.logger.info("Attempting to click PIM menu option")
         self.click(self.PIM_OPTION) # This is Passed ✅
 
     def is_page_loaded(self):
+        self.logger.info("Checking if PIM page is loaded")
         return self.is_element_present(self.PIM_HEADER) # This is Passed ✅
 
     def pim_search_emp(self, emp_id):
+        self.logger.info(f"Starting employee search for emp_id: {emp_id}")
         self.enter_text(self.EMP_ID, emp_id) # This is Passed ✅
         self.click(self.SEARCH)
+        self.logger.info("Employee search submitted")
 
     def is_reset_present(self):
+        self.logger.info("Checking if reset button is present")
         return self.is_element_present(self.RESET)
 
     def reset_search(self):
+        self.logger.info("Attempting to reset search")
         self.click(self.RESET)
-        print("Reset search completed")
+        self.logger.info("Reset search completed")

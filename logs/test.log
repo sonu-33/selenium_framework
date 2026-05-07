@@ -1,0 +1,11 @@
+2026-05-07 15:14:51,150 - INFO - ZSeleniumFramework - Starting login test for username=Admin expected=True
+2026-05-07 15:14:55,861 - INFO - ZSeleniumFramework - Opened URL: https://opensource-demo.orangehrmlive.com
+2026-05-07 15:14:57,194 - INFO - ZSeleniumFramework - Login form submitted
+2026-05-07 15:30:39,160 - INFO - ZSeleniumFramework - Starting login test for username=Admin expected=True
+2026-05-07 15:30:44,048 - INFO - ZSeleniumFramework - Opened URL: https://opensource-demo.orangehrmlive.com
+2026-05-07 15:30:44,048 - INFO - ZSeleniumFramework - Starting login with username: Admin
+2026-05-07 15:30:44,722 - INFO - ZSeleniumFramework - Entered text 'Admin' into element with locator: ('name', 'username')
+2026-05-07 15:30:44,914 - INFO - ZSeleniumFramework - Entered text 'admin123' into element with locator: ('name', 'password')
+2026-05-07 15:30:45,204 - INFO - ZSeleniumFramework - Clicked on element with locator: ('xpath', "//button[@type='submit']")
+2026-05-07 15:30:45,204 - INFO - ZSeleniumFramework - Login action completed
+2026-05-07 15:30:45,205 - INFO - ZSeleniumFramework - Login form submitted

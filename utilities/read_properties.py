@@ -5,14 +5,14 @@ config = configparser.RawConfigParser() # RawConfigParser reads values exactly a
 #config.read("configuration/config.ini")
 
 config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "configuration", "config.ini")
-config.read(config_path)
+config.read(config_path) # loads config.ini; makes settings available to tests
 
 class ReadConfig:
-    @staticmethod
+    @staticmethod # provides static helper methods to read base_url
     def get_base_url(): # this method is called in test.test_login_page.py file
         return config.get("credentials", "base_url") # base_url is called from config.ini file
 
-    @staticmethod
+    @staticmethod # provides static helper methods to read browser name
     def get_browser():
         return config.get("credentials", "browser_name")
 

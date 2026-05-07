@@ -9,9 +9,17 @@ class LoginPage(BasePage):
     ADMIN_OPTION = (By.XPATH,"//a[normalize-space()='']")
 
     def is_page_loaded(self):
-        return self.driver.find_element(*self.USERNAME).is_displayed()
+        try:
+            is_visible = self.driver.find_element(*self.USERNAME).is_displayed()
+            self.logger.info("Login page verified as loaded - Username field is visible")
+            return is_visible
+        except Exception as e:
+            self.logger.error(f"Failed to verify login page loaded: {str(e)}")
+            return False
 
     def login(self, username, password):
+        self.logger.info(f"Starting login with username: {username}")
         self.enter_text(self.USERNAME, username)
         self.enter_text(self.PASSWORD, password)
         self.click(self.LOGIN_BUTTON)
+        self.logger.info("Login action completed")

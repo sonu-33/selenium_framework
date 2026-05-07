@@ -1,0 +1,11 @@
+pytest finds test_login_page.py and test_pim_page.py
+it imports conftest.py, tests/..., pages/..., utilities/...
+ReadConfig loads config.ini
+pd.read_excel() loads test data from Excel
+logger() fixture is created once and returns the logger
+driver() fixture starts Chrome once
+each test method is called with driver and logger injected
+page objects are created with LoginPage(driver) or PIMPage(driver)
+BasePage methods handle Selenium waits and actions, logging each step
+if a step fails, an exception is raised and pytest marks the test failed
+after all tests, driver.quit() closes Chrome
